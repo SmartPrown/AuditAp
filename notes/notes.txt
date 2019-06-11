@@ -1,0 +1,33 @@
+Post
+--------
+title
+text
+author
+created_date
+published_date
+
+
+
+Check
+-----
+Name
+Reason (text)
+Author
+Date
+// file
+// result
+
++initiate
++upload
++run
+
+
+Documents:
+
+https://tutorial.djangogirls.org/ru/django_forms/ — Django girls basic tutorial
+
+https://wsvincent.com/django-image-uploads/ — image (and file) processing
+
+
+https://simpleisbetterthancomplex.com/tutorial/2016/08/01/how-to-upload-files-with-django.html
+— тут есть описание статической работы с файлом...

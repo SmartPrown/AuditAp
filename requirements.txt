@@ -1,0 +1,13 @@
+Django==2.2.1
+django-excel==0.0.10
+et-xmlfile==1.0.1
+jdcal==1.4
+lml==0.0.9
+pyexcel==0.5.13
+pyexcel-io==0.5.17
+pyexcel-webio==0.1.4
+pytz==2019.1
+sqlparse==0.3.0
+texttable==1.6.1
+xlrd==1.2.0
+XlsxWriter==1.1.8

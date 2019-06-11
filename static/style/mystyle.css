@@ -1,0 +1,104 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 80vw;
+    margin-left: 10vw;
+    font-size: 12pt;
+
+}
+
+
+
+.header h1 {
+    height: 30pt;
+    padding-top: 70pt;
+}
+
+.header img {
+    float: right;
+}
+
+hr {
+    margin-bottom: 20pt;
+    border: none;
+    border-top: 1px solid gray;
+}
+
+.input-container {
+  /*margin: 3em auto;*/
+    width: 80%;
+  /*max-width: 300px;*/
+  background-color: #EDEDED;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+}
+
+
+input[type='file'] {
+  display: none;
+}
+
+
+.textf {
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5pt;
+    background-color: #EDEDED;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+}
+
+.file-info {
+  font-size: 0.9em;
+    /*width: 31vw;*/
+    /*display: inline-block;*/
+    /*text-align: right;*/
+}
+
+.btn {
+    background: dodgerblue;
+    color: #fff;
+    /*min-height: 35px;*/
+    /*padding: 10px;*/
+    font-size: 12pt;
+    /*line-height: pt;*/
+    padding: 5pt;
+    border: none;
+    display: inline-block;
+}
+
+.browse-btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: left;
+}
+
+.upload-btn {
+    border-radius: 5px;
+}
+
+.btn:hover {
+  background: #4ec0b4;
+}
+
+
+.excel_input {
+    width: 40vw;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.res_out {
+    width: 39vw;
+    display: inline-block;
+    vertical-align:top;
+}
+
+h2 {
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+
+
+

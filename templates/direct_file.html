@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/suai.png' %}" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style/mystyle.css' %}">
+
+
+    <meta charset="UTF-8">
+    <title>Assessor's helper</title>
+
+
+
+</head>
+
+<body>
+    <div class="">
+        <div class="header">
+            <img src="{% static 'images/suai.png' %}" id="logo" class="img-fluid" style="max-width: 100px;" alt="face">
+
+                <h1>Auditor's helper</h1>
+            {{ user_name }} (<a href="{% url 'log_out' %}">logout</a>)
+
+        </div>
+    </div>
+    <hr>
+
+
+    <form  class="excel_input" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <h2>File:</h2>
+        <div class="input-container">
+                <input type="file" class="" id="real-input" name="upload">
+
+                    <div class="btn browse-btn">
+                        Browse Files
+                    </div>
+
+                    <span class="file-info">Upload a file</span>
+
+        </div>
+        <h2>Materiality: <input type="number" name="materiality" class ="textf" value="500000"/></h2>
+        <br/>
+        <button class="btn upload-btn" type="submit">Upload and check</button>
+    </form>
+
+    <div class="res_out">
+        {%  if uploaded_file_url %}
+
+            <h2>Results:</h2>
+            <p>Original file: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a><br/>
+            Profit file: <a href="{{ profit_url }}">{{ profit_url }}</a><br/>
+            Loss file: <a href="{{ loss_url }}">{{ loss_url }}</a></p>
+        {%  endif %}
+
+        {% if upload_error %}
+            <p><h2>Error occurred:</h2> {{ upload_error }}</p>
+        {% endif %}
+    </div>
+
+
+
+</body>
+
+<script>
+        const uploadButton = document.querySelector('.browse-btn');
+        const fileInfo = document.querySelector('.file-info');
+        const realInput = document.getElementById('real-input');
+
+        uploadButton.addEventListener('click', (e) => {
+            realInput.click();
+        });
+
+        realInput.addEventListener('change', () => {
+            const name = realInput.value.split(/\\|\//).pop();
+            const truncated = name;
+
+            fileInfo.innerHTML = truncated;
+        });
+    </script>
+</html>
+
